@@ -33,19 +33,23 @@ $config = [
                 '<controller:\w+>/cat/<slug:[\w-]+>' => '<controller>/cat',
             ],
         ],
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/entekhabat',
+                'baseUrl' => '@web/themes/entekhabat',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/entekhabat/views',
+                ],
+            ],
+        ],
         'assetManager' => [
             // uncomment the following line if you want to auto update your assets (unix hosting only)
             //'linkAssets' => true,
+            'forceCopy' => true,
             'bundles' => [
-                'yii\web\JqueryAsset' => [
-                    'js' => [YII_DEBUG ? 'jquery.js' : 'jquery.min.js'],
-                ],
-                'yii\bootstrap\BootstrapAsset' => [
-                    'css' => [YII_DEBUG ? 'css/bootstrap.css' : 'css/bootstrap.min.css'],
-                ],
-                'yii\bootstrap\BootstrapPluginAsset' => [
-                    'js' => [YII_DEBUG ? 'js/bootstrap.js' : 'js/bootstrap.min.js'],
-                ],
+                'yii\web\JqueryAsset' => false,
+                'yii\bootstrap\BootstrapAsset' => false,
+                'yii\bootstrap\BootstrapPluginAsset' => false,
             ],
         ],
         'log' => [
@@ -58,6 +62,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        
     ],
     'params' => $params,
 ];
