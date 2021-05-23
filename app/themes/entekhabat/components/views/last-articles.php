@@ -10,13 +10,13 @@ use yii\helpers\Url;
     <?php foreach($items as $item): ?>
         <div class="blog-box">
             <div class="post-media">
-                <a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title="">
+                <a href="<?= Url::to(['article/view', 'slug' => $item->slug]) ?>" title="">
                     <img src="<?= $item->image ?>" alt="" class="img-fluid">
                     
                 </a>
             </div><!-- end media -->
             <div class="blog-meta">
-                <p><a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title=""><?= $item->title ?></a></p>
+                <p><a href="<?= Url::to(['article/view', 'slug' => $item->slug]) ?>" title=""><?= $item->title ?></a></p>
             </div><!-- end meta -->
         </div><!-- end blog-box -->
         <hr class="invis">
