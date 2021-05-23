@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use app\themes\entekhabat\components\TopMenuWidget;
 
 $this->title = 'EasyiiCMS start page';
 ?>
@@ -16,137 +17,9 @@ $this->title = 'EasyiiCMS start page';
             </div>
         </div>
         <header class="tech-header header">
-            
-                <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/version/tech-logo.png" alt=""></a>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">صفحه نخست</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="category-08.html">خاطرات</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="category-06.html">برنامه دولت کرامت</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="category-02.html">نماهنگ</a>
-                            </li>
-                            <li class="nav-item dropdown has-submenu ">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">شرح زندگی</a>
-                                <ul class="dropdown-menu " aria-labelledby="dropdown01">
-                                    <li>
-                                        <a href="">زندگی نامه</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">تحصیلات</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">مسئولیت ها</a>
-                                    </li>
-
-                  
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown has-submenu ">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown02" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">عکس ها</a>
-                                <ul class="dropdown-menu " aria-labelledby="dropdown02">
-                                    <li>
-                                        <a href="Gallery.html">تصاویر</a>
-                                    </li>
-                                    <li>
-                                        <a href="Gallery.html">پوستر</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown has-submenu ">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">سخنرانی</a>
-                                <ul class="dropdown-menu " aria-labelledby="dropdown03">
-                                    <li>
-                                        <a href="category-02.html">صوتی</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-02.html">تصویری</a>
-                                    </li>
-                                </ul>
-                            </li>
-                         
-                          
-                             
-                            <li class="nav-item dropdown has-submenu ">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown11" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">صفحات</a>
-                                <ul class="dropdown-menu " aria-labelledby="dropdown11">
-                                    <li>
-                                        <a href="category-01.html">لیست دو ستون راست</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-04.html">لیست سه ستون راست</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-06.html">لیست دو ستون چپ</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-07.html">لیست سه ستون چپ</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-05.html">لیست 4 ستون خالی</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-02.html">لیست ویدئو</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-03.html">لیست بررسی ها</a>
-                                    </li>
-                                    <li>
-                                        <a href="category-08.html">اسلایدر و 4 ستون</a>
-                                    </li>
-                                    <li>
-                                        <a href="Gallery.html">گالری تصاویر</a>
-                                    </li>
-                                    <li>
-                                        <a href="mini.html">پیام های کوتاه</a>
-                                    </li>
-                                    <li>
-                                        <a href="author.html">مطالب نویسنده</a>
-                                    </li>
-                                    <li>
-                                        <a href="single.html">جزئیات پست</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">تماس با ما</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">پاسخ به شایعات</a>
-                            </li>
-                                
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">تماس با ما</a>
-                                    </li>
-                            
-
-                                </ul>
-                                <ul class="navbar-nav mr-2 sosos">
-                                    <li class="nav-item">
-                                        <a class="nav-link navicon" href="#"><i class="fa fa-rss"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link navicon" href="#"><i class="fa fa-instagram"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link navicon" href="#"><i class="fa fa-telegram"></i></a>
-                                    </li>
-                                </ul>
-</div>
-                </nav>
-            
+        
+            <?= TopMenuWidget::widget() ?>   
+         
         </header><!-- end market-header -->
 
         <section class="section first-section">
