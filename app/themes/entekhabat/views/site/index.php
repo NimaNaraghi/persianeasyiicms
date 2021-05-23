@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use app\themes\entekhabat\components\TopMenuWidget;
+use app\themes\entekhabat\components\CarouselWidget;
 
 $this->title = 'EasyiiCMS start page';
 ?>
@@ -18,44 +19,13 @@ $this->title = 'EasyiiCMS start page';
         </div>
         <header class="tech-header header">
         
-            <?= TopMenuWidget::widget() ?>   
+            <?= TopMenuWidget::widget() ?>
+
+            <?= CarouselWidget::widget() ?>
          
         </header><!-- end market-header -->
 
-        <section class="section first-section">
-            <div class="container">
-                <div id="demo" class="carousel slide " data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner ">
-                        <div class="carousel-item active">
-                            <img src="upload/slider_01.jpg" class="img-fluid" >
-                        </div>
-                        <div class="carousel-item">
-                            <img src="upload/slider_02.jpg"  class="img-fluid" >
-                        </div>
-                        <div class="carousel-item">
-                            <img src="upload/slider_03.jpg"  class="img-fluid" >
-                        </div>
-                    </div>
-
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
+        
 
         <section class="section">
             <div class="container my-custom-container">
