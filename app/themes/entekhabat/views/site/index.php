@@ -2,7 +2,7 @@
 use yii\helpers\Url;
 use app\themes\entekhabat\components\TopMenuWidget;
 use app\themes\entekhabat\components\CarouselWidget;
-
+use app\themes\entekhabat\components\LastNewsWidget;
 $this->title = 'EasyiiCMS start page';
 ?>
 
@@ -370,52 +370,7 @@ $this->title = 'EasyiiCMS start page';
                     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" >
                         <div class="sidebar  pad0"   >
                        
-                            <div class="widget widgetbox">
-                                <h2 class="lists_title">آخرین ویدئو ها</h2>
-                                <div class="trend-videos">
-                                    <div class="blog-box">
-                                        <div class="post-media">
-                                            <a href="single.html" title="">
-                                                <img src="upload/tech_video_01.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect">
-                                                    <span class="videohover"></span>
-                                                </div><!-- end hover -->
-                                            </a>
-                                        </div><!-- end media -->
-                                        <div class="blog-meta">
-                                            <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی</a></h4>
-                                        </div><!-- end meta -->
-                                    </div><!-- end blog-box -->
-                                    <hr class="invis">
-                                    <div class="blog-box">
-                                        <div class="post-media">
-                                            <a href="single.html" title="">
-                                                <img src="upload/tech_video_02.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect">
-                                                    <span class="videohover"></span>
-                                                </div><!-- end hover -->
-                                            </a>
-                                        </div><!-- end media -->
-                                        <div class="blog-meta">
-                                            <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی</a></h4>
-                                        </div><!-- end meta -->
-                                    </div><!-- end blog-box -->
-                                    <hr class="invis">
-                                    <div class="blog-box">
-                                        <div class="post-media">
-                                            <a href="single.html" title="">
-                                                <img src="upload/tech_video_03.jpg" alt="" class="img-fluid">
-                                                <div class="hovereffect">
-                                                    <span class="videohover"></span>
-                                                </div><!-- end hover -->
-                                            </a>
-                                        </div><!-- end media -->
-                                        <div class="blog-meta">
-                                            <h4><a href="single.html" title="">لورم ایپسوم متن ساختگی با تولید سادگی</a></h4>
-                                        </div><!-- end meta -->
-                                    </div><!-- end blog-box -->
-                                </div><!-- end videos -->
-                            </div>
+                            <?= LastNewsWidget::widget(['layout' => LastNewsWidget::LAYOUT_MAIN_PAGE]) ?>
                               
 
                             <div class="widget widgetbox" >
