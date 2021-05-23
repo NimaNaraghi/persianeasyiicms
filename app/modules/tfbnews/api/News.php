@@ -5,7 +5,7 @@ use Yii;
 use yii\data\ActiveDataProvider;
 use yii\easyii\models\Tag;
 use yii\easyii\widgets\Fancybox;
-use yii\widgets\LinkPager;
+use app\components\TfbLinkPager;
 
 use app\modules\tfbnews\models\News as NewsModel;
 
@@ -113,7 +113,16 @@ class News extends \yii\easyii\components\API
 
     public function api_pages()
     {
-        return $this->_adp ? LinkPager::widget(['pagination' => $this->_adp->pagination]) : '';
+        return $this->_adp ? TfbLinkPager::widget([
+            'pagination' => $this->_adp->pagination,
+            'options' => [
+                'class' => "pagination justify-content-start",
+            ],
+            'pageCssClass' => 'page-item',
+            'linkOptions' => ['class' => 'page-link'],
+            'nextPageLabel' => Yii::t('app','Next Page'),
+            'prevPageLabel' => Yii::t('app', 'Previous Page')
+        ]) : '';
     }
 
     private function findNews($id_slug)
