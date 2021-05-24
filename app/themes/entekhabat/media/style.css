@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'vazir-fd-wl';
     src: url('fonts/vazir-fd-wl.eot') format('embedded-opentype'), url('fonts/vazir-fd-wl.ttf') format('truetype'), url('fonts/vazir-fd-wl.woff') format('woff');
@@ -8,8 +7,8 @@ body {
     font-size: 15px;
     line-height: 26px;
     background-color: #ffffff;
-     font-family: 'vazir-fd-wl'!important;
-     direction:rtl
+    font-family: 'vazir-fd-wl'!important;
+    direction: rtl
 }
 
 h1,
@@ -23,7 +22,7 @@ p,
 .navbar-inverse .navbar-nav .nav-link,
 .header .dropdown-menu,
 .navbar-nav .nav-link {
-   font-family: 'vazir-fd-wl'!important;
+    font-family: 'vazir-fd-wl'!important;
 }
 
 h1,
@@ -44,7 +43,7 @@ h4:hover a,
 h5:hover a,
 h6:hover a {
     /*text-decoration: underline !important;*/
-        color: #4b9c43 !important;
+    color: #4b9c43 !important;
 }
 
 h1 {
@@ -118,7 +117,6 @@ a {
 **************************************/
 
 .header {
-   
     position: relative;
     background-color: #ffffff;
 }
@@ -183,8 +181,6 @@ a {
     background-color: #fff;
     color: black;
     padding: 0.8rem 1rem;
- 
-     
     text-align: right;
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
@@ -297,7 +293,8 @@ a {
     font-size: 14px;
     margin: 0;
     padding: 0.5rem 0 0;
-    line-height: 1.4;text-align: right;
+    line-height: 1.4;
+    text-align: right;
 }
 
 .menucat {
@@ -324,7 +321,7 @@ a {
 
 div.tab {
     float: right;
-    padding-top:25px;
+    padding-top: 25px;
     border-right: 1px solid #e1e3e6;
     width: 20%;
     background-color: #fff;
@@ -365,7 +362,8 @@ div.tab button.active {
     background-color: #dcdcdc;
     border-right: 0 solid #e1e3e6;
     border-bottom: 1px solid #e1e3e6;
-    border-left: 0 solid #e1e3e6;font-family: 'vazir-fd-wl'!important;
+    border-left: 0 solid #e1e3e6;
+    font-family: 'vazir-fd-wl'!important;
 }
 
 div.tab button:hover {
@@ -388,7 +386,7 @@ div.tab button:hover {
 }
 
 .header .navbar-nav .has-submenu.menu-large ul li {
-    background: url(images/menubg.jpg) repeat-y center center #ffffff !important;
+    background: url(/images/menubg.jpg) repeat-y center center #ffffff !important;
 }
 
 .tab-details {
@@ -551,7 +549,8 @@ div.tab button:hover {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-    transform: scale(1);border-radius: 20px;
+    transform: scale(1);
+    border-radius: 20px;
 }
 
 .post-media:hover img,
@@ -602,7 +601,7 @@ div.tab button:hover {
 
 .footer {
     padding: 4rem 0 4rem;
-    background: url(images/footer.png) repeat-x center bottom #edeff2;
+    background: url(/images/footer.png) repeat-x center bottom #edeff2;
 }
 
 .footer.wb {
@@ -683,14 +682,14 @@ div.tab button:hover {
 
 .dmtop {
     background-color: #42A139;
-    background-image: url(images/arrow.png);
+    background-image: url(/images/arrow.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;
     width: 55px;
     height: 55px;
     padding: 7px 10px;
-        border-radius: 50%;
+    border-radius: 50%;
     text-indent: -99999px;
     position: fixed;
     bottom: -100px;
@@ -701,7 +700,6 @@ div.tab button:hover {
     -o-transition: all .7s ease-in-out;
     -ms-transition: all .7s ease-in-out;
     transition: all .7s ease-in-out;
-  
 }
 
 
@@ -782,7 +780,8 @@ div.tab button:hover {
     margin-right: 6px;
     padding: 0.8rem 0.8rem;
     position: relative;
-    text-transform: capitalize;border-radius: 20px;
+    text-transform: capitalize;
+    border-radius: 20px;
 }
 
 .page-link:hover,
@@ -792,11 +791,13 @@ div.tab button:hover {
 
 .page-item:first-child .page-link {
     margin-left: 0;
-    border-radius: 0;border-radius: 10px;
+    border-radius: 0;
+    border-radius: 10px;
 }
 
 .page-item:last-child .page-link {
-    border-radius: 0;border-radius: 20px;
+    border-radius: 0;
+    border-radius: 20px;
 }
 
 .page-title {
@@ -844,7 +845,9 @@ div.tab button:hover {
 
 .carousel-indicators li {
     max-width: 15px;
-    height: 15px;border-radius: 15px;background: #b8b8b8 
+    height: 15px;
+    border-radius: 15px;
+    background: #b8b8b8
 }
 
 .tag-cloud-single span {
@@ -946,7 +949,7 @@ div.tab button:hover {
 }
 
 .blog-title-area .breadcrumb-item.active,
-.blog-title-area .breadcrumb-item + .breadcrumb-item::before,
+.blog-title-area .breadcrumb-item+.breadcrumb-item::before,
 .blog-title-area .blog-meta small,
 .blog-title-area a {
     color: #a3a5a8;
@@ -1033,7 +1036,7 @@ div.tab button:hover {
 }
 
 .small-title {
-    background: #e0e0e0  none repeat scroll 0 0;
+    background: #e0e0e0 none repeat scroll 0 0;
     font-size: 16px;
     right: 5%;
     line-height: 1;
@@ -1048,10 +1051,8 @@ div.tab button:hover {
     position: relative;
     padding: 3rem 2rem;
     border: 1px dashed #dadada;
-    margin-left:15px;
-    margin-right:15px;
-    
-
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: #f9f9f9
 }
 
@@ -1078,10 +1079,12 @@ div.tab button:hover {
     margin-bottom: 25px;
     list-style: none
 }
-.check li{
-    color:#1e7f15;
-    font-size:16px
+
+.check li {
+    color: #1e7f15;
+    font-size: 16px
 }
+
 .check li:before {
     font-family: FontAwesome;
     content: "\f0c8";
@@ -1095,7 +1098,7 @@ div.tab button:hover {
 }
 
 .banner-spot {
-    background: #edeff2 url("images/ads-bg.png") no-repeat scroll center right / auto 100%;
+    background: #edeff2 url("/images/ads-bg.png") no-repeat scroll center right / auto 100%;
     clear: both;
     display: block;
     height: auto;
@@ -1223,7 +1226,8 @@ hr.invis3 {
 }
 
 .hovereffect {
-    position: absolute;border-radius: 20px;
+    position: absolute;
+    border-radius: 20px;
     top: 0;
     opacity: 0;
     left: 0;
@@ -1284,8 +1288,6 @@ hr.invis3 {
 }
 
 .blog-list .blog-meta.big-meta h4 {
-       
-
     background-color: #ffffff;
     padding: 1rem 1.5rem 1rem;
     border-radius: 50px;
@@ -1421,7 +1423,6 @@ hr.invis3 {
     margin-left: 0
 }
 
-
 .sidebar .widget ul {
     list-style: none;
     margin: 0;
@@ -1439,14 +1440,16 @@ hr.invis3 {
 .sidebar a {
     color: rgba(0, 0, 0, 0.6);
 }
-.pad0{
-    padding-left:0px!important;
-    padding-right:0px!important;
+
+.pad0 {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
 }
+
 .sidebar .widget-title {
     display: block;
     font-size: 18px;
-    margin:0px;
+    margin: 0px;
     padding: 0;
     line-height: 1;
 }
@@ -1462,17 +1465,16 @@ hr.invis3 {
 
 .blog-list-widget img {
     background: rgba(255, 255, 255, 0.62) none repeat scroll 0 0;
-     margin-left: 15px;
+    margin-left: 15px;
     max-width: 80px;
-    padding: 1px;border-radius: 20px;
+    padding: 1px;
+    border-radius: 20px;
 }
 
 .blog-list-widget .list-group-item {
-    
     border: 0;
     margin: 0;
     background-color: transparent;
-
     padding: 15px;
     border-top: 1px rgba(65, 65, 65, 0.15) solid;
 }
@@ -1524,12 +1526,11 @@ hr.invis3 {
     box-shadow: none;
     display: inline-block;
     font-size: 14px;
-    height:36px;
+    height: 36px;
     padding-left: 1.5rem;
     line-height: 1;
     letter-spacing: 0.3px;
     vertical-align: middle;
-    
 }
 
 .card-block {
@@ -1625,7 +1626,8 @@ hr.invis3 {
 .newsletter-widget .btn {
     height: 36px;
     border-radius: 0;
-    border: 0;padding: 0.2rem 0.9rem;
+    border: 0;
+    padding: 0.2rem 0.9rem;
 }
 
 .newsletter-widget .btn i {
@@ -1697,39 +1699,44 @@ hr.invis3 {
     border-radius: 50%
 }
 
-.tophead{
-        background: #242424;
-    -webkit-box-shadow: 0 3px 20px 0 rgba(0,0,0,.4);
-    -moz-box-shadow: 0 3px 20px 0 rgba(0,0,0,.4);
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,.16);
+.tophead {
+    background: #242424;
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .4);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .16);
     overflow: hidden;
     position: absolute;
     z-index: 3;
     top: 0;
     width: 100%;
-    height:40px;padding-top: 6px;
+    height: 40px;
+    padding-top: 6px;
 }
-.tophead ul{
-    float:right;
+
+.tophead ul {
+    float: right;
 }
-.tophead ul li{
-float:left;
-padding-left:10px;
-list-style: none;
+
+.tophead ul li {
+    float: left;
+    padding-left: 10px;
+    list-style: none;
 }
-.tophead a{ 
-    color:#a1a0a0;
-    
+
+.tophead a {
+    color: #a1a0a0;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     font-size: 12px;
     padding: 9px 15px 9px 0;
-       }
-.tophead a:hover{ 
-     transition: all .3s ease-out;
+}
+
+.tophead a:hover {
+    transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
-    color:#fff!important;
-       }
+    color: #fff!important;
+}
+
 footer .divfooter {
     background-color: #383838;
     height: 1px;
@@ -1737,52 +1744,59 @@ footer .divfooter {
     overflow: hidden;
 }
 
-
-.menuscrool{
+.menuscrool {
     /*har efecti dost dari bede inja*/
 }
-.navbar-brand img{
+
+.navbar-brand img {
     height: 26px;
     right: 0;
     top: 23px;
     width: 140px;
 }
-.social{
-    text-align:right
+
+.social {
+    text-align: right
 }
-.social a{
+
+.social a {
     height: 40px;
-  
-      
 }
-.social i{
-      background-color: rgba(255,255,255,.03);
-    border: 1px solid rgba(255,255,255,.1);
+
+.social i {
+    background-color: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .1);
     font-size: 14px;
     /* height: 40px; */
     line-height: 40px;
     width: 40px;
     text-align: center;
     color: #fff;
-    display: inline-block;border-radius:50px
-      
+    display: inline-block;
+    border-radius: 50px
 }
-.mainbox{
-    background: #fff;padding-bottom: 5px;
-}
-.mainbox .blog-box{
-   border-bottom: 1px rgba(226, 226, 226, 0.47) solid;padding:10px;margin-left:5px;margin-right:5px
-}
-.mainbox h4 a:hover{
-    color:#34922b !important
-              }
- 
 
-.widgetbox{
+.mainbox {
+    background: #fff;
+    padding-bottom: 5px;
+}
+
+.mainbox .blog-box {
+    border-bottom: 1px rgba(226, 226, 226, 0.47) solid;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+.mainbox h4 a:hover {
+    color: #34922b !important
+}
+
+.widgetbox {
     background: #fff;
 }
 
-.widgetbox .widget-title{
-        background-color: #f5f5f5;
+.widgetbox .widget-title {
+    background-color: #f5f5f5;
     padding: 15px;
 }

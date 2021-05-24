@@ -35,7 +35,6 @@ use yii\helpers\Url;
                     <small class="firstsmall"><a class="bg-green" href="<?= Url::to(['/search', 'q' => $item->mainTag]) ?>" title=""><?= $item->mainTag ?></a></small>
                     <?php endif; ?>
                     <small><a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title=""><?= $item->date ?></a></small>
-                    <small><a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title=""><i class="fa fa-eye"></i> 1114</a></small>
                 </div><!-- end meta -->
             </div><!-- end blog-box -->
 
