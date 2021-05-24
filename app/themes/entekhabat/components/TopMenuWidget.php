@@ -5,6 +5,7 @@ use yii\base\Widget;
 use yii\bootstrap\Nav;
 use app\modules\tfbarticle\api\Article;
 use yii\helpers\Url;
+use app\modules\tfbpage\api\Page;
 
 class TopMenuWidget extends Widget
 {
@@ -22,8 +23,20 @@ class TopMenuWidget extends Widget
 
     public function generateItems()
     {
-        $tree = Article::tree();
         $items = [];
+
+        $this->generateItemsFromArticles($items);
+
+        $this->generateItemsFromPages($items);
+
+        return $items;
+    }
+
+    protected function generateItemsFromArticles(Array &$items)
+    {
+        $tree = Article::tree();
+
+        //Add categories to items.
         foreach($tree as $category)
         {
             if(empty($category->children)){
@@ -57,8 +70,22 @@ class TopMenuWidget extends Widget
             $items[] = $item;
 
         }
+    }
 
-        return $items;
+    protected function generateItemsFromPages(Array &$items)
+    {
+        //Add Pages to items.
+        $pages = Page::getAllPages();
+
+        foreach($pages as $page)
+        {
+            $items[] = [
+                'label' => $page->title,
+                'url' => Url::to(['page/view', 'slug' => $page->slug]),
+                'options' => ['class' => 'nav-item'],
+                'linkOptions' => ['class' => 'nav-link'],
+            ];
+        }
     }
 }
 
