@@ -25,9 +25,9 @@ class TopMenuWidget extends Widget
     {
         $items = [];
 
-        $this->generateItemsFromArticles($items);
-
         $this->generateItemsFromPages($items);
+        
+        $this->generateItemsFromArticles($items);
 
         return $items;
     }
