@@ -18,7 +18,7 @@ use app\themes\entekhabat\components\LastNewsWidget;
                             <li class="breadcrumb-item active">لورم ایپسوم متن ساختگی با تولید سادگی </li>
                         </ol>
 
-                        <span class="color-green"><a href="<?= $item->getURL(); ?>" title="<?= $item->title ?>"><?= $item->title ?></a></span>
+                        <span class="color-green"><a href="<?= $item->getURL() ?>" title="<?= $item->title ?>"><?= $item->title ?></a></span>
 
                         <h3><?= $item->short ?> </h3>
 
