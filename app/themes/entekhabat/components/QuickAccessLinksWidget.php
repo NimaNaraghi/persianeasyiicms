@@ -6,6 +6,8 @@ use app\modules\tfbpage\api\Page;
 
 class QuickAccessLinksWidget extends Widget
 {
+    
+
     public $layout;
     protected $items;
     public $title;

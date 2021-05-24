@@ -26,7 +26,7 @@ class TopMenuWidget extends Widget
         $items = [];
 
         $this->generateItemsFromPages($items);
-        
+
         $this->generateItemsFromArticles($items);
 
         return $items;
@@ -81,7 +81,7 @@ class TopMenuWidget extends Widget
         {
             $items[] = [
                 'label' => $page->title,
-                'url' => Url::to(['page/view', 'slug' => $page->slug]),
+                'url' => $page->getURL(),
                 'options' => ['class' => 'nav-item'],
                 'linkOptions' => ['class' => 'nav-link'],
             ];
