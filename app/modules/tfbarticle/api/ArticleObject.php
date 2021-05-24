@@ -23,6 +23,21 @@ class ArticleObject extends \yii\easyii\components\ApiObject
 
     private $_photos;
 
+    /**
+     * @return string
+     */
+    public function getMainTag()
+    {
+        $tags = $this->getTags();
+
+        return $tags[0] ?? null;
+    }
+
+    public function getURL()
+    {
+        return Url::to(['article/view', 'slug' => $this->slug]);
+    }
+
     public function getTitle(){
         return LIVE_EDIT ? API::liveEdit($this->model->title, $this->editLink) : $this->model->title;
     }

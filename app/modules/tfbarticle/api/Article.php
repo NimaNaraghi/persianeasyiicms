@@ -8,7 +8,7 @@ use yii\easyii\models\Tag;
 use app\modules\tfbarticle\models\Category;
 use app\modules\tfbarticle\models\Item;
 use yii\easyii\widgets\Fancybox;
-use yii\widgets\LinkPager;
+use app\components\TfbLinkPager;
 
 /**
  * Article module API
@@ -141,7 +141,16 @@ class Article extends \yii\easyii\components\API
 
     public function api_pages()
     {
-        return $this->_adp ? LinkPager::widget(['pagination' => $this->_adp->pagination]) : '';
+        return $this->_adp ? TfbLinkPager::widget([
+            'pagination' => $this->_adp->pagination,
+            'options' => [
+                'class' => "pagination justify-content-start",
+            ],
+            'pageCssClass' => 'page-item',
+            'linkOptions' => ['class' => 'page-link'],
+            'nextPageLabel' => Yii::t('app','Next Page'),
+            'prevPageLabel' => Yii::t('app', 'Previous Page')
+        ]) : '';
     }
 
     private function findCategory($id_slug)
