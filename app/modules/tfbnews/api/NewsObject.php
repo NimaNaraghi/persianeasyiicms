@@ -26,6 +26,11 @@ class NewsObject extends \yii\easyii\components\ApiObject
         return $tags[0] ?? null;
     }
 
+    public function getURL()
+    {
+        return Url::to(['news/view', 'slug' => $this->slug]);
+    }
+
     public function getTitle(){
         return LIVE_EDIT ? API::liveEdit($this->model->title, $this->editLink) : $this->model->title;
     }

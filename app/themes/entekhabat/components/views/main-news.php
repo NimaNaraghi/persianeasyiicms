@@ -21,7 +21,7 @@ use yii\helpers\Url;
             <div class="blog-box row">
                 <div class="col-md-4">
                     <div class="post-media">
-                        <a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title="<?= $item->title ?>">
+                        <a href="<?= $item->getURL() ?>" title="<?= $item->title ?>">
                             <img src="<?= $item->image ?>" alt="" class="img-fluid">
                             <div class="hovereffect"></div>
                         </a>
@@ -29,7 +29,7 @@ use yii\helpers\Url;
                 </div><!-- end col -->
 
                 <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title="<?= $item->title ?>"><?= $item->title ?></a></h4>
+                    <h4><a href="<?= $item->getURL() ?>" title="<?= $item->title ?>"><?= $item->title ?></a></h4>
                     <p><?= $item->short ?></p>
                     <?php if(!is_null($item->mainTag)): ?>
                     <small class="firstsmall"><a class="bg-green" href="<?= Url::to(['/search', 'q' => $item->mainTag]) ?>" title=""><?= $item->mainTag ?></a></small>

@@ -9,7 +9,7 @@ use yii\helpers\Url;
     <?php foreach($items as $item): ?>
         <div class="blog-box">
             <div class="post-media">
-                <a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title="<?= $item->title ?>">
+                <a href="<?= $item->getURL() ?>" title="<?= $item->title ?>">
                     <img src="<?= $item->image ?>" alt="<?= $item->title ?>" class="img-fluid">
                     <div class="hovereffect">
                         <span class="videohover"></span>
@@ -17,7 +17,7 @@ use yii\helpers\Url;
                 </a>
             </div><!-- end media -->
             <div class="blog-meta">
-                <h4><a href="<?= Url::to(['news/view', 'slug' => $item->slug]) ?>" title="<?= $item->title ?>"><?= $item->title ?></a></h4>
+                <h4><a href="<?= $item->getURL() ?>" title="<?= $item->title ?>"><?= $item->title ?></a></h4>
             </div><!-- end meta -->
         </div><!-- end blog-box -->
         <hr class="invis">
