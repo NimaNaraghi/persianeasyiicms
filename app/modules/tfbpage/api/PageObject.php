@@ -10,6 +10,11 @@ class PageObject extends \yii\easyii\components\ApiObject
 {
     public $slug;
 
+    public function getURL()
+    {
+        return Url::to(['page/view', 'slug' => $this->slug]);
+    }
+
     public function getTitle(){
         if($this->model->isNewRecord){
             return $this->createLink;

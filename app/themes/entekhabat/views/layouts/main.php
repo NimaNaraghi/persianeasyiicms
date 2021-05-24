@@ -3,8 +3,7 @@
 use app\themes\entekhabat\assets\EntekhabatAsset;
 use yii\helpers\Html;
 use app\themes\entekhabat\components\TopMenuWidget;
-use app\themes\entekhabat\components\CarouselWidget;
-use yii\widgets\Breadcrumbs;
+use app\themes\entekhabat\components\QuickAccessLinksWidget;
 
 $asset = EntekhabatAsset::register($this);
 ?>
@@ -111,25 +110,7 @@ $asset = EntekhabatAsset::register($this);
                         </div><!-- end col -->
                     
                     <div class="col-lg-4">
-                        <div class="widget">
-                            <div class="footer-text text-right">
-                                <div class="widget">
-                                    <h2 class="widget-title">ریاست جمهور کاندیدای محترم</h2>
-                                    <div class="link-widget">
-                                        <ul>
-                                            <li><a href="#">درباره ما</a></li>
-                                            <li><a href="#">تماس با ما</a></li>
-                                            <li><a href="#">دسته بندی</a></li>
-                                            <li><a href="#">ویدئو</a></li>
-                                            <li><a href="#">انتخابات</a></li>
-                                        </ul>
-                                    </div><!-- end link-widget -->
-                                </div><!-- end widget -->
-                             
-                                <hr class="invis">
-                              
-                            </div><!-- end footer-text -->
-                        </div><!-- end widget -->
+                        <?= QuickAccessLinksWidget::widget(); ?>
                     </div>
                     </div>
                 <div class="divfooter"></div>
