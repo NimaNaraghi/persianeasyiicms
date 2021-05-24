@@ -38,22 +38,7 @@ $config = [
             // uncomment the following line if you want to auto update your assets (unix hosting only)
             //'linkAssets' => true,
             'forceCopy' => true,
-            // 'bundles' => [
-            //     'yii\web\JqueryAsset' => [
-            //         'js' => [YII_DEBUG ? 'jquery.js' : 'jquery.min.js'],
-            //     ],
-            //     'yii\bootstrap\BootstrapAsset' => [
-            //         'css' => [YII_DEBUG ? 'css/bootstrap.css' : 'css/bootstrap.min.css'],
-            //     ],
-            //     'yii\bootstrap\BootstrapPluginAsset' => [
-            //         'js' => [YII_DEBUG ? 'js/bootstrap.js' : 'js/bootstrap.min.js'],
-            //     ],
-            // ],
-            'bundles' => [
-                'yii\web\JqueryAsset' => false,
-                'yii\bootstrap\BootstrapAsset' => false,
-                'yii\bootstrap\BootstrapPluginAsset' => false,
-            ],
+            
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -80,5 +65,31 @@ if (YII_ENV_DEV) {
     
     $config['components']['db']['enableSchemaCache'] = false;
 }
+
+$uri = $_SERVER['REQUEST_URI'];
+
+$isAdminPanel = preg_match("~^\/admin~", $uri);
+
+if($isAdminPanel){
+    $bundles = [
+            'yii\web\JqueryAsset' => [
+                'js' => [YII_DEBUG ? 'jquery.js' : 'jquery.min.js'],
+            ],
+            'yii\bootstrap\BootstrapAsset' => [
+                'css' => [YII_DEBUG ? 'css/bootstrap.css' : 'css/bootstrap.min.css'],
+            ],
+            'yii\bootstrap\BootstrapPluginAsset' => [
+                'js' => [YII_DEBUG ? 'js/bootstrap.js' : 'js/bootstrap.min.js'],
+            ],
+        ];
+}else{
+    $bundles = [
+        'yii\web\JqueryAsset' => false,
+        'yii\bootstrap\BootstrapAsset' => false,
+        'yii\bootstrap\BootstrapPluginAsset' => false,
+    ];
+}
+
+$config['components']['assetManager']['bundles'] = $bundles;
 
 return array_merge_recursive($config, require($webroot . '/vendor/noumo/easyii/config/easyii.php'));
