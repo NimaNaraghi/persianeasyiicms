@@ -38,6 +38,11 @@ class ArticleObject extends \yii\easyii\components\ApiObject
         return Url::to(['article/view', 'slug' => $this->slug]);
     }
 
+    public function getCategoryURL()
+    {
+        return Url::to(['category/view', 'slug' => $this->cat->slug]);
+    }
+
     public function getTitle(){
         return LIVE_EDIT ? API::liveEdit($this->model->title, $this->editLink) : $this->model->title;
     }

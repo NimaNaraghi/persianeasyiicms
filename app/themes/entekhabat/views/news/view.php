@@ -6,16 +6,15 @@ use app\themes\entekhabat\components\LastNewsWidget;
 
 ?>
 
-<section class="section single-wrapper">
-    <div class="container my-custom-container">
+
         <div class="row">
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div class="page-wrapper mainbox">
                     <div class="blog-title-area text-center">
                         <ol class="breadcrumb hidden-xs-down">
-                            <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                            <li class="breadcrumb-item"><a href="#">بلاگ</a></li>
-                            <li class="breadcrumb-item active">لورم ایپسوم متن ساختگی با تولید سادگی </li>
+                            <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                            <li class="breadcrumb-item"><a href="#"><?= Yii::t('app','News') ?></a></li>
+                            <li class="breadcrumb-item active"><?= $item->title; ?> </li>
                         </ol>
 
                         <span class="color-green"><a href="<?= $item->getURL() ?>" title="<?= $item->title ?>"><?= $item->title ?></a></span>
@@ -83,6 +82,5 @@ use app\themes\entekhabat\components\LastNewsWidget;
                 <?= LastArticlesWidget::widget(['layout' => LastArticlesWidget::LAYOUT_MAIN_PAGE]); ?>
             </div>
         </div>
-    </div><!-- end container -->
-</section>
+    
 

@@ -7,13 +7,12 @@ use app\themes\entekhabat\components\ArticlesWidget;
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <h2><i class="fa fa-info bg-green"></i> انتخابات <small class="hidden-xs-down hidden-sm-down">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</small></h2>
+                <h2><i class="fa fa-info bg-green"></i> <?= $category->title ?> <small class="hidden-xs-down hidden-sm-down"></small></h2>
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                    <li class="breadcrumb-item"><a href="#">بلاگ</a></li>
-                    <li class="breadcrumb-item active">انتخابات</li>
+                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item active"><a href="<?= $category->getURL() ?>"><?= $category->title ?></a></li>
                 </ol>
             </div><!-- end col -->                    
         </div><!-- end row -->

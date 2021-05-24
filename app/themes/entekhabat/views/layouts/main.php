@@ -4,6 +4,7 @@ use app\themes\entekhabat\assets\EntekhabatAsset;
 use yii\helpers\Html;
 use app\themes\entekhabat\components\TopMenuWidget;
 use app\themes\entekhabat\components\CarouselWidget;
+use yii\widgets\Breadcrumbs;
 
 $asset = EntekhabatAsset::register($this);
 ?>
@@ -44,7 +45,14 @@ $asset = EntekhabatAsset::register($this);
             
          
         </header><!-- end market-header -->
-            <?= $content ?>
+        
+        <section class="section">
+            <div class="container my-custom-container">
+                    <?= $content ?>
+            </div><!-- end container -->
+        </section>
+
+
             <footer class="footer">
             <div class="container my-custom-container">
                 <div class="row secfooter1">

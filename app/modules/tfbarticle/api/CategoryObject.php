@@ -19,6 +19,11 @@ class CategoryObject extends \yii\easyii\components\ApiObject
     private $_adp;
     private $_items;
 
+    public function getURL()
+    {
+        return Url::to(['category/viwe', 'slug' => $this->slug]);
+    }
+
     public function getTitle(){
         return LIVE_EDIT ? API::liveEdit($this->model->title, $this->editLink) : $this->model->title;
     }
