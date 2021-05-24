@@ -4,6 +4,7 @@ use app\themes\entekhabat\components\LastArticlesWidget;
 use yii\helpers\Url;
 use app\themes\entekhabat\components\LastNewsWidget;
 
+$this->title = $item->title;
 ?>
 
 
@@ -12,7 +13,7 @@ use app\themes\entekhabat\components\LastNewsWidget;
                 <div class="page-wrapper mainbox">
                     <div class="blog-title-area text-center">
                         <ol class="breadcrumb hidden-xs-down">
-                            <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                            <li class="breadcrumb-item"><a href="/"><?= Yii::t('app','Home') ?></a></li>
                             <li class="breadcrumb-item"><a href="<?= $item->getCategoryURL() ?>"><?= $item->cat->title ?></a></li>
                             <li class="breadcrumb-item active"><?= $item->title; ?> </li>
                         </ol>

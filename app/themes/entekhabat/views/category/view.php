@@ -1,6 +1,8 @@
 <?php
 use app\themes\entekhabat\components\LastNewsWidget;
 use app\themes\entekhabat\components\ArticlesWidget;
+
+$this->title = $category->title;
 ?>
 
 <div class="page-title lb single-wrapper">
@@ -11,7 +13,7 @@ use app\themes\entekhabat\components\ArticlesWidget;
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">خانه</a></li>
+                    <li class="breadcrumb-item"><a href="/"><?= Yii::t('app','Home') ?></a></li>
                     <li class="breadcrumb-item active"><a href="<?= $category->getURL() ?>"><?= $category->title ?></a></li>
                 </ol>
             </div><!-- end col -->                    

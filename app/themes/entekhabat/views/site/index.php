@@ -7,8 +7,11 @@ use app\themes\entekhabat\components\CarouselWidget;
 use app\themes\entekhabat\components\LastNewsWidget;
 use app\themes\entekhabat\components\NewsWidget;
 use app\themes\entekhabat\components\LastArticlesWidget;
+use yii\easyii\modules\page\api\Page;
 
-$this->title = 'EasyiiCMS start page';
+$page = Page::get('home-page');
+
+$this->title = $page->title;
 ?>
 
 <?= CarouselWidget::widget() ?>
