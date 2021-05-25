@@ -9,7 +9,7 @@ $config = [
     'id' => 'app',
     'basePath' => $basePath,
     'bootstrap' => ['log'],
-    'language' => 'en-US',
+    'language' => 'fa',
     'runtimePath' => $webroot . '/runtime',
     'vendorPath' => $webroot . '/vendor',
     'components' => [
@@ -39,6 +39,18 @@ $config = [
             //'linkAssets' => true,
             'forceCopy' => true,
             
+        ],
+        'i18n' => [
+            'translations' => [
+                'easyii*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    // 'fileMap' => [
+                    //     'easyii' => 'easyii.php',
+                    // ]
+                ]
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
