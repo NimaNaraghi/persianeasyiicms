@@ -21,7 +21,7 @@ $this->title = $page->title;
     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
         
         <div class="sidebar">
-        <?= LastArticlesWidget::widget(['layout' => LastArticlesWidget::LAYOUT_MAIN_PAGE])    ?>
+        <?= LastArticlesWidget::widget(['layout' => LastArticlesWidget::LAYOUT_MAIN_PAGE, 'title' => Yii::t('app', 'Last Articles')])    ?>
             
         </div><!-- end sidebar -->
     </div>
@@ -30,7 +30,7 @@ $this->title = $page->title;
     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" >
         <div class="sidebar  pad0"   >
         
-            <?= LastNewsWidget::widget(['layout' => LastNewsWidget::LAYOUT_MAIN_PAGE]) ?>
+            <?= LastNewsWidget::widget(['layout' => LastNewsWidget::LAYOUT_MAIN_PAGE, 'title' => Yii::t('app', 'Last News')]) ?>
             
         </div><!-- end sidebar -->
     </div><!-- end col -->

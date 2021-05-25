@@ -17,6 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Logout' => 'خروج',
+    'Open site' => 'سایت عمومی را باز کن',
     'Add' => 'اضافه',
     'Categories' => 'دسته بندی ها',
     'Clear image' => 'عکس را پاک کن',
@@ -42,6 +44,4 @@ return [
     'Title' => 'عنوان',
     'Update error. {0}' => 'خطای ویرایش. {0}',
     'Views' => 'بازدیدها',
-    'Logout' => 'خروج',
-    'Open site' => 'سایت عمومی را باز کن',
 ];

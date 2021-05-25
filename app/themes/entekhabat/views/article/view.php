@@ -74,7 +74,7 @@ $this->title = $item->title;
         </div><!-- end row -->
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="sidebar">
-                <?= LastArticlesWidget::widget(['layout' => LastArticlesWidget::LAYOUT_MAIN_PAGE]); ?>
+                <?= LastArticlesWidget::widget(['layout' => LastArticlesWidget::LAYOUT_MAIN_PAGE, 'title' => Yii::t('app', 'Last Articles')]); ?>
             </div>
         </div>
     
