@@ -50,6 +50,12 @@ $config = [
                 ]
             ],
         ],
+        'formatter' => [
+            'class' => 'app\components\TfbFormatter',
+            'locale' => 'fa_IR@calendar=persian',
+            'calendar' => IntlDateFormatter::TRADITIONAL,
+            'dateFormat' => 'y EEEE dd MMMM'
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
