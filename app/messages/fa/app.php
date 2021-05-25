@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'News' => '',
-    'Next Page' => '',
-    'Pages' => '',
-    'Previous Page' => '',
-    'Tags' => '',
-    'Articles' => '@@مقاله ها@@',
+    'News' => 'خبرها',
+    'Next Page' => 'صفحه بعد',
+    'Pages' => 'صفحه ها',
+    'Previous Page' => 'صفحه قبل',
+    'Tags' => 'برچسب',
+    'Articles' => 'مقاله ها',
     'Home' => 'خانه',
 ];
