@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Article created' => '',
-    'Article deleted' => '',
-    'Article updated' => '',
-    'Articles' => '',
-    'Create article' => '',
-    'Edit article' => '',
-    'Short' => '',
+    'Article created' => 'مقاله ساخته شد',
+    'Article deleted' => 'مقاله پاک شد',
+    'Article updated' => 'مقاله ویرایش شد',
+    'Articles' => 'مقاله ها',
+    'Create article' => 'مقاله بساز',
+    'Edit article' => 'مقاله ویرایش کن',
+    'Short' => 'خلاصه',
 ];

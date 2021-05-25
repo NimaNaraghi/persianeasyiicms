@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create news' => '',
-    'Edit news' => '',
-    'News' => '',
-    'News created' => '',
-    'News deleted' => '',
-    'News updated' => '',
-    'Short' => '',
+    'Create news' => 'خبر بساز',
+    'Edit news' => 'خبر ویرایش کن',
+    'News' => 'خبرها',
+    'News created' => 'خبر ساخته شد',
+    'News deleted' => 'خبر پاک شد',
+    'News updated' => 'خبر ویرایش شد',
+    'Short' => 'خلاصه',
 ];

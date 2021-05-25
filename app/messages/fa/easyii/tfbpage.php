@@ -17,10 +17,10 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create page' => '',
-    'Edit page' => '',
-    'Page created' => '',
-    'Page deleted' => '',
-    'Page updated' => '',
-    'Pages' => '',
+    'Create page' => 'صفحه بساز',
+    'Edit page' => 'صفحه ویرایش کن',
+    'Page created' => 'صفحه ساخته شد',
+    'Page deleted' => 'صفحه پاک شد',
+    'Page updated' => 'صفحه ویرایش شد',
+    'Pages' => 'صفحه ها',
 ];

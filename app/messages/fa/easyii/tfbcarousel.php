@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Carousel' => '',
-    'Carousel created' => '',
-    'Carousel item deleted' => '',
-    'Carousel updated' => '',
-    'Create carousel' => '',
-    'Edit carousel' => '',
-    'Update error. {0}' => '',
+    'Carousel' => 'اسلایدر',
+    'Carousel created' => 'اسلاید بساز',
+    'Carousel item deleted' => 'آیتم اسلاید پاک شد',
+    'Carousel updated' => 'اسلاید ویرایش شد',
+    'Create carousel' => 'اسلاید بساز',
+    'Edit carousel' => 'اسلاید ویرایش کن',
+    'Update error. {0}' => 'خطای ویرایش. {0}',
 ];
