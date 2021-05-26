@@ -44,24 +44,29 @@ class TopMenuWidget extends Widget
 
         foreach($flatCats as $category)
         {
-            $subItems[] = [
-                'label' => $category->title,
-                'url' => Url::to(['gallery/index', 'slug' => $category->slug]),
-                'options' => ['class' => 'nav-item'],
-                
-            ];
-
+            if($category->status == 1){
+                $subItems[] = [
+                    'label' => $category->title,
+                    'url' => Url::to(['gallery/index', 'slug' => $category->slug]),
+                    'options' => ['class' => 'nav-item'],
+                    
+                ];
+            }
+        
         }
 
-        $item = [
-            'label' => Yii::t('app', 'Gallery'),
-            'options' => ['class' => 'dropdown has-submenu'],
-            'items' => $subItems,
-            'linkOptions' => ['class' => 'nav-link'],
-        ];
+        if(count($subItems) > 0){
+            $item = [
+                'label' => Yii::t('app', 'Gallery'),
+                'options' => ['class' => 'dropdown has-submenu'],
+                'items' => $subItems,
+                'linkOptions' => ['class' => 'nav-link'],
+            ];
+            
+            
+            $items[] = $item;
+        }
         
-        
-        $items[] = $item;
     }
 
     protected function generateItemsFromArticles(Array &$items)

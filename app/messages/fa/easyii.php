@@ -19,6 +19,7 @@
 return [
     'Create category' => 'دسته بندی بساز', 
     'Edit category' => 'ویرایش دسته بندی',
+    "Status successfully changed" => 'وضعیت با موفقیت تغییر کرد',
     'Logout' => 'خروج',
     'Open site' => 'سایت عمومی را باز کن',
     'Add' => 'اضافه',
