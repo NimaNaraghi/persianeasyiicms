@@ -17,5 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create carousel' => 'اسلایدر بساز',
+    'Albums' => 'آلبوم ها',
 ];

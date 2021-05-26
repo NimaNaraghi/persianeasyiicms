@@ -6,6 +6,8 @@ use yii\bootstrap\Nav;
 use app\modules\tfbarticle\api\Article;
 use yii\helpers\Url;
 use app\modules\tfbpage\api\Page;
+use app\modules\tfbgallery\api\Gallery;
+use Yii;
 
 class TopMenuWidget extends Widget
 {
@@ -29,7 +31,37 @@ class TopMenuWidget extends Widget
 
         $this->generateItemsFromArticles($items);
 
+        $this->generateItemsFromGallery($items);
+
         return $items;
+    }
+
+    protected function generateItemsFromGallery(Array &$items)
+    {
+        $flatCats = Gallery::cats();
+
+        $subItems = [];
+
+        foreach($flatCats as $category)
+        {
+            $subItems[] = [
+                'label' => $category->title,
+                'url' => Url::to(['gallery/index', 'slug' => $category->slug]),
+                'options' => ['class' => 'nav-item'],
+                
+            ];
+
+        }
+
+        $item = [
+            'label' => Yii::t('app', 'Gallery'),
+            'options' => ['class' => 'dropdown has-submenu'],
+            'items' => $subItems,
+            'linkOptions' => ['class' => 'nav-link'],
+        ];
+        
+        
+        $items[] = $item;
     }
 
     protected function generateItemsFromArticles(Array &$items)

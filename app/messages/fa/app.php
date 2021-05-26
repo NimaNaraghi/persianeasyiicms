@@ -17,10 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Category not found.' => 'دسته بندی پیدا نشد',
+    'Articles' => 'مقاله ها',
+    'Gallery' => 'گالری عکس ها',
+    'Home' => 'خانه',
     'Last Articles' => 'آخرین مقاله ها',
     'Last News' => 'آخرین خبرها',
-    'Articles' => 'مقاله ها',
-    'Home' => 'خانه',
     'News' => 'خبرها',
     'Next Page' => 'صفحه بعد',
     'Pages' => 'صفحه ها',
