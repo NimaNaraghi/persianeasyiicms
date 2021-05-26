@@ -13,9 +13,13 @@ $page = Page::get('home-page');
 
 $this->title = $page->title;
 ?>
-
-<?= CarouselWidget::widget() ?>
-
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <?= CarouselWidget::widget() ?>
+    </div>
+    <div class="col-md-1"></div>
+</div>
         
 <div class="row">
     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
