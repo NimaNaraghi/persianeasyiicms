@@ -17,15 +17,10 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Articles' => 'مقاله ها',
-    'Category not found.' => 'دسته بندی پیدا نشد',
-    'Gallery' => 'گالری عکس ها',
-    'Home' => 'خانه',
-    'Last Articles' => 'آخرین مقاله ها',
-    'Last News' => 'آخرین خبرها',
-    'News' => 'خبرها',
-    'Next Page' => 'صفحه بعد',
-    'Pages' => 'صفحه ها',
-    'Previous Page' => 'صفحه قبل',
-    'Tags' => 'برچسب',
+    'Create text' => 'قطعه متنی بساز',
+    'Edit text' => 'قطعه متنی را ویرایش کن',
+    'Text created' => 'قطعه متنی ساخته شد',
+    'Text deleted' => 'قطعه متنی پاک شد',
+    'Text updated' => 'قطعه متنی ویرایش شد',
+    'Texts' => 'متن ها',
 ];

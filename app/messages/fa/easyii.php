@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create category' => 'دسته بندی بساز', 
-    'Edit category' => 'ویرایش دسته بندی',
-    "Status successfully changed" => 'وضعیت با موفقیت تغییر کرد',
+    'Settings' => 'تنظیمات',
+    'Create category' => 'دسته بندی بساز',
     'Logout' => 'خروج',
     'Open site' => 'سایت عمومی را باز کن',
+    'Status successfully changed' => 'وضعیت با موفقیت تغییر کرد',
     'Add' => 'اضافه',
     'Categories' => 'دسته بندی ها',
     'Clear image' => 'عکس را پاک کن',
@@ -29,6 +29,7 @@ return [
     'Create error. {0}' => 'خطای ساخت. {0}',
     'Date' => 'تاریخ',
     'Delete item' => 'آیتم را پاک کن',
+    'Edit category' => 'ویرایش دسته بندی',
     'Image' => 'تصویر',
     'Image cleared' => 'تصویر پاک شد',
     'Link' => 'لینک',

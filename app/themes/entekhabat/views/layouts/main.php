@@ -4,8 +4,11 @@ use app\themes\entekhabat\assets\EntekhabatAsset;
 use yii\helpers\Html;
 use app\themes\entekhabat\components\TopMenuWidget;
 use app\themes\entekhabat\components\QuickAccessLinksWidget;
+use app\modules\tfbtext\api\Text;
 
 $asset = EntekhabatAsset::register($this);
+
+$textOne = Text::get('text-one');
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -65,8 +68,8 @@ $asset = EntekhabatAsset::register($this);
                                     <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
                                             <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-right">
-                                            <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
-                                            <small>16 اسفند 99</small>
+                                            <h5 class="mb-1"><?= $textOne ?></h5>
+                                            
                                         </div>
                                     </a>
                                     <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
