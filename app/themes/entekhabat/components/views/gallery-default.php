@@ -1,5 +1,5 @@
 <?php
-
+/* @var $item app\modules\tfbgallery\api\PhotoObject */
 
 
 ?>

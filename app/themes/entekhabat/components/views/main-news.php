@@ -2,6 +2,7 @@
 use app\modules\tfbnews\api\News;
 use yii\helpers\Url;
 
+/* @var $item app\modules\tfbnews\api\NewsObject */
 ?>
 
 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">

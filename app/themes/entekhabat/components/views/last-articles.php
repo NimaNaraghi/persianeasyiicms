@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+/* @var $item app\modules\tfbarticle\api\ArticleObject */
 
 ?>
 

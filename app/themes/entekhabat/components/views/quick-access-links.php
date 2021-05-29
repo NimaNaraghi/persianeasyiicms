@@ -1,5 +1,5 @@
 <?php
-
+/* @var $items Array of stdClasse objects */
 ?>
 
 <div class="widget">

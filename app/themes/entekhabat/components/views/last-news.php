@@ -1,6 +1,6 @@
 <?php
-use yii\helpers\Url;
 
+/* @var $item app\modules\tfbnews\api\NewsObject */
 ?>
 
 <div class="widget widgetbox">

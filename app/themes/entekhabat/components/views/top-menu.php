@@ -1,9 +1,7 @@
 <?php
-use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\bootstrap\Nav;
 
-
+/* @var $items Array */
 ?>
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
     <button 
