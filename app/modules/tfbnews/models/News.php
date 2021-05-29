@@ -57,6 +57,11 @@ class News extends \yii\easyii\components\ActiveRecord
         return [
             'seoBehavior' => SeoBehavior::className(),
             'taggabble' => Taggable::className(),
+            'sluggable' => [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                'ensureUnique' => true
+            ]
             
         ];
     }

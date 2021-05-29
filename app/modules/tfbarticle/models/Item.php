@@ -21,7 +21,7 @@ class Item extends \yii\easyii\components\ActiveRecord
     public function rules()
     {
         return [
-            [['text', 'title', 'slug'], 'required'],
+            [['text', 'title'], 'required'],
             [['title', 'short', 'text'], 'trim'],
             ['title', 'string', 'max' => 128],
             ['image', 'image'],
@@ -52,6 +52,11 @@ class Item extends \yii\easyii\components\ActiveRecord
         return [
             'seoBehavior' => SeoBehavior::className(),
             'taggabble' => Taggable::className(),
+            'sluggable' => [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                'ensureUnique' => true
+            ]
             
         ];
     }
