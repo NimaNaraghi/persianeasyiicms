@@ -33,6 +33,7 @@ use yii\helpers\Url;
                             <?= $item->short ?>
                         </p>
                         <small><a href="<?= $item->getURL() ?>" title=""><?= $item->date ?></a></small>
+                        <small><a href="#" title=""><i class="fa fa-eye"></i> <?= $item->views ?></a></small>
                     </div><!-- end meta -->
                 </div><!-- end blog-box -->
             </div><!-- end col -->
