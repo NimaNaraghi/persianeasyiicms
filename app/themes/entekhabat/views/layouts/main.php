@@ -9,6 +9,8 @@ use app\modules\tfbtext\api\Text;
 $asset = EntekhabatAsset::register($this);
 
 $textOne = Text::get('text-one');
+$textFollowUs = Text::get('follow-us');
+$textCopyRight = Text::get('copy-right');
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -67,18 +69,12 @@ $textOne = Text::get('text-one');
                                 <div class="list-group">
                                     <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-right">
-                                            <h5 class="mb-1"><?= $textOne ?></h5>
+                                            <!-- <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-right"> -->
+                                            <h5 class="mb-1"><?= $textOne ?? '' ?></h5>
                                             
                                         </div>
                                     </a>
-                                    <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                        <div class="w-100 justify-content-between">
-                                            <img src="upload/tech_blog_01.jpg" alt="" class="img-fluid float-right">
-                                            <h5 class="mb-1">لورم ایپسوم متن ساختگی با تولید سادگی</h5>
-                                            <small>16 اسفند 99</small>
-                                        </div>
-                                    </a>
+                                    
                                  
                                 </div>
                             </div><!-- end blog-list -->
@@ -91,7 +87,7 @@ $textOne = Text::get('text-one');
 
                                 </h2>
                                 <div class="blog-list-widget">
-                                    <div class="list-group">
+                                    <!-- <div class="list-group">
                                         <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
                                                 <img src="upload/tech_blog_08.jpg" alt="" class="img-fluid float-right">
@@ -107,7 +103,7 @@ $textOne = Text::get('text-one');
                                             </div>
                                         </a>
                                       
-                                    </div>
+                                    </div> -->
                                 </div><!-- end blog-list -->
                             </div><!-- end widget -->
                         </div><!-- end col -->
@@ -125,7 +121,7 @@ $textOne = Text::get('text-one');
 
 
                                 <h2 class="widget-title">
-                                    کاندیدای محترم در شبکه های اجتماعی
+                                    <?= $textFollowUs ?? '' ?>
 
 
                                 </h2>
@@ -138,11 +134,11 @@ $textOne = Text::get('text-one');
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="copyright">تمامی حقوق برای<a href="#"> کاندیدای محترم </a>محفوظ است.</div>
+                                <div class="copyright"><?= $textCopyRight ?? '' ?></div>
 
                             </div>
                             <div class="col-lg-4">
-                                <a href="index.html"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
+                                <a href="/"><img src="images/version/tech-footer-logo.png" alt="" class="img-fluid"></a>
                             </div>
                         </div>
                     </div>

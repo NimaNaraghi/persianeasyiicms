@@ -17,6 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Create text' => 'قطعه متنی بساز',
+    'Text created' => 'قطعه متنی ساخته شد',
     'Welcome' => 'خوش آمدید',
     'Welcome to control panel, choose which section you want to manage in left menu.' => 'به پنل مدیریت خوش آمدید، لطفا از منوی سمت راست قسمت مورد نظر خود را انتخاب کنید.',
     'Settings' => 'تنظیمات',
