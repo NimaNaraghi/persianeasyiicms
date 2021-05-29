@@ -24,7 +24,7 @@ $('.p-datepicker').each(function(){
     $(this).pDatepicker({
           format: 'YYYY/MM/DD',
           initialValue: true,
-          timePicker : {enabled:true},
+          timePicker : {enabled:false},
           persianDigit: true,
           observer: true,
           altField: '#' + altFieldPDate,
