@@ -1,5 +1,5 @@
 <?php
-use yii\easyii\widgets\DateTimePicker;
+// use yii\easyii\widgets\DateTimePicker;
 use yii\easyii\helpers\Image;
 use yii\easyii\widgets\TagsInput;
 use yii\helpers\Html;
@@ -7,6 +7,31 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\easyii\widgets\Redactor;
 use yii\easyii\widgets\SeoForm;
+use app\assets\PersianDatePickerAsset;
+
+PersianDatePickerAsset::register($this);
+
+$this->registerJS("
+$('.p-datepicker').each(function(){
+    
+    var existDate = null;
+    var altFieldPDate = null;
+    
+    existDate = $(this).val();
+    altFieldPDate = $(this).data('id');
+    
+
+    $(this).pDatepicker({
+          format: 'YYYY/MM/DD',
+          initialValue: true,
+          timePicker : {enabled:true},
+          persianDigit: true,
+          observer: true,
+          altField: '#' + altFieldPDate,
+    });
+});
+");
+
 
 $module = $this->context->module->id;
 ?>
@@ -34,7 +59,14 @@ $module = $this->context->module->id;
     ]
 ]) ?>
 
-<?= $form->field($model, 'time')->widget(DateTimePicker::className()); ?>
+<?php 
+    echo Html::activeLabel($model,'time');
+    echo Html::activeHiddenInput($model, 'time');
+    echo Html::input( 'text', 'persian-time', $model->time ? date('Y/m/d', $model->time) : '',
+        $options = ['class'=>'form-control p-datepicker' , 'data-id' => 'news-time'] );
+?>
+
+
 
 <?php if($this->context->module->settings['enableTags']) : ?>
     <?= $form->field($model, 'tagNames')->widget(TagsInput::className()) ?>

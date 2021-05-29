@@ -10,6 +10,7 @@ $config = [
     'basePath' => $basePath,
     'bootstrap' => ['log'],
     'language' => 'fa',
+    'timezone' => 'Asia/Tehran',
     'runtimePath' => $webroot . '/runtime',
     'vendorPath' => $webroot . '/vendor',
     'components' => [

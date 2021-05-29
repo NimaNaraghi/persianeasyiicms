@@ -13,6 +13,11 @@ class News extends \yii\easyii\components\ActiveRecord
     const STATUS_OFF = 0;
     const STATUS_ON = 1;
 
+    // public function beforeValidate()
+    // {
+    //     var_dump($this->time);
+    // }
+
     public static function tableName()
     {
         return 'app_tfbnews';
@@ -26,7 +31,7 @@ class News extends \yii\easyii\components\ActiveRecord
             ['title', 'string', 'max' => 128],
             ['image', 'image'],
             [['views', 'time', 'status'], 'integer'],
-            ['time', 'default', 'value' => time()],
+            // ['time', 'default', 'value' => time()],
             ['slug', 'match', 'pattern' => self::$SLUG_PATTERN, 'message' => Yii::t('easyii', 'Slug can contain only 0-9, a-z and "-" characters (max: 128).')],
             ['slug', 'default', 'value' => null],
             ['status', 'default', 'value' => self::STATUS_ON],
@@ -72,6 +77,9 @@ class News extends \yii\easyii\components\ActiveRecord
             if(!$insert && $this->image != $this->oldAttributes['image'] && $this->oldAttributes['image']){
                 @unlink(Yii::getAlias('@webroot').$this->oldAttributes['image']);
             }
+
+            $this->time = substr($this->time, 0, 10);
+
             return true;
         } else {
             return false;

@@ -76,6 +76,8 @@ class Item extends \yii\easyii\components\ActiveRecord
                 @unlink(Yii::getAlias('@webroot').$this->oldAttributes['image']);
             }
 
+            $this->time = substr($this->time, 0, 10);
+
             return true;
         } else {
             return false;
