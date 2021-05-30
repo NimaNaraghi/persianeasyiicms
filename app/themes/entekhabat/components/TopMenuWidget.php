@@ -115,6 +115,13 @@ class TopMenuWidget extends Widget
             $item .= Html::endTag('ul');
             $item .= Html::endTag('li');
 
+          }else{
+              $item = [
+                'label' => $cat->title,
+                'url' => Url::to(['category/view', 'slug' => $cat->slug]),
+                'options' => ['class' => 'nav-item'],
+                'linkOptions' => ['class' => 'nav-link'],
+              ];
           }
 
           $items[] = $item;
