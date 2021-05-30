@@ -15,6 +15,7 @@ class EntekhabatAsset extends \yii\web\AssetBundle
         "plugins/Gallery/lightgallery.css",
         "plugins/Gallery/Gallery.css",
         "css/yamm.css",
+        "custom.css"
     ];
     public $js = [
         "js/jquery.min.js",
