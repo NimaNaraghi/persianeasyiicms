@@ -8,6 +8,7 @@ use yii\helpers\Url;
 use app\modules\tfbpage\api\Page;
 use app\modules\tfbgallery\api\Gallery;
 use Yii;
+use yii\helpers\Html;
 
 class TopMenuWidget extends Widget
 {
@@ -69,44 +70,57 @@ class TopMenuWidget extends Widget
         
     }
 
+    /**
+     * Generates a mega menu of articles' categories by following the instructions of Yamm!3 plugin.
+     * @var $items Array a reference to a list of all menu items utilized by yii\bootstrap\Nav widget
+     * @return void
+     */
     protected function generateItemsFromArticles(Array &$items)
     {
         $tree = Article::tree();
 
-        //Add categories to items.
-        foreach($tree as $category)
+        foreach($tree as $cat)
         {
-            if(empty($category->children)){
-                $item = [
-                    'label' => $category->title,
-                    'url' => Url::to(['category/view', 'slug' => $category->slug]),
-                    'options' => ['class' => 'nav-item'],
-                    'linkOptions' => ['class' => 'nav-link']
-                ];
-            }else{
-                $itemChildren = [];
+          $item = "";
+          
+          if(!empty($cat->children)){
 
-                foreach($category->children as $child)
-                {
-                    $itemChildren[] = [
-                        'label' => $child->title,
-                        'url' => Url::to(['category/view', 'slug' => $child->slug]),
-                        'options' => ['class' => 'nav-item'],
-                        
-                    ];
+            $item .= Html::beginTag('li', ['class' => 'dropdown yamm-fw']);
+            $item .= Html::a($cat->title, '#', ['class' => 'dropdown-toggle nav-link', 'data-toggle' => "dropdown", 'aria-expanded' => "true"]);
+            $item .= Html::beginTag('ul', ['class' => 'dropdown-menu']);
+            $item .= Html::beginTag('li');
+            $item .= Html::beginTag('div', ['class' => 'yamm-content']);
+            $item .= Html::beginTag('div', ['class' => 'row']);
+            
+            foreach($cat->children as $child)
+            {
+                $item .= Html::beginTag('ul', ['class' => 'col-sm-2 list-unstyled']);
+                //TODO: Implement a getURL method in the child items
+                $item .= Html::tag('li',"<p><strong>" . Html::a($child->title,['category/view', 'slug' => $child->slug]) . "</strong></p>");
+                if(!empty($child->children)){
+                  foreach($child->children as $childB)
+                  {
+                    $item .= Html::tag('li', Html::a($childB->title, ['category/view', 'slug' => $childB->slug]));
+                  }
+                    
                 }
-
-                $item = [
-                    'label' => $category->title,
-                    'options' => ['class' => 'dropdown has-submenu'],
-                    'items' => $itemChildren,
-                    'linkOptions' => ['class' => 'nav-link'],
-                ];
+                
+                $item .= Html::endTag('ul');
             }
 
-            $items[] = $item;
+            
+            $item .= Html::endTag('div');
+            $item .= Html::endTag('div');
+            $item .= Html::endTag('li');
+            $item .= Html::endTag('ul');
+            $item .= Html::endTag('li');
 
+          }
+
+          $items[] = $item;
         }
+        
+        
     }
 
     protected function generateItemsFromPages(Array &$items)

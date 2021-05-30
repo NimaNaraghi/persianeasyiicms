@@ -3,7 +3,7 @@ use yii\bootstrap\Nav;
 
 /* @var $items Array */
 ?>
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+<nav class="navbar yamm navbar-toggleable-md navbar-inverse bg-inverse">
     <button 
         class="navbar-toggler navbar-toggler-right" 
         type="button" 
@@ -19,7 +19,7 @@ use yii\bootstrap\Nav;
         <?php 
             echo Nav::widget([
                 'items' => $items,
-                'options' => ['class' =>'navbar-nav mr-auto'], // set this to nav-tab to get tab-styled navigation
+                'options' => ['class' =>'navbar-nav  mr-auto'], // set this to nav-tab to get tab-styled navigation
             ]);
         ?>
         
