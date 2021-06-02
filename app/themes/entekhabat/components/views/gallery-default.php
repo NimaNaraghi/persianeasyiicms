@@ -14,7 +14,7 @@
                     
                     <?php foreach($items as $item): ?>
 
-                    <div class="col-md-4  gallery-grid " data-src="<?= $item->thumb('266', '153') ?>" data-sub-html="">
+                    <div class="col-md-4  gallery-grid " data-src="<?= $item->image ?>" data-sub-html="">
                         <a href="#" title="<?= $item->description ?>">
                             <img src="<?= $item->thumb('266', '153') ?>" alt="" class="img-responsive img-thumbnail  img-fluid">
                         </a>

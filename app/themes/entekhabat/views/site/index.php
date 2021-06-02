@@ -16,7 +16,7 @@ $this->title = $page->title;
 <div class="row">
     
     <div class="col-md-12">
-    <?= CarouselWidget::widget() ?>
+        <?= CarouselWidget::widget() ?>
     </div>
     
 </div>
