@@ -4,7 +4,7 @@ use app\modules\tfbnews\api\News;
 use yii\helpers\Url;
 use app\themes\entekhabat\components\TopMenuWidget;
 use app\themes\entekhabat\components\CarouselWidget;
-use app\themes\entekhabat\components\LastNewsWidget;
+use app\themes\entekhabat\components\LastImagesWidget;
 use app\themes\entekhabat\components\NewsWidget;
 use app\themes\entekhabat\components\LastArticlesWidget;
 use yii\easyii\modules\page\api\Page;
@@ -34,7 +34,7 @@ $this->title = $page->title;
     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" >
         <div class="sidebar  pad0"   >
         
-            <?= LastNewsWidget::widget(['layout' => LastNewsWidget::LAYOUT_MAIN_PAGE, 'title' => Yii::t('app', 'Last News')]) ?>
+            <?= LastImagesWidget::widget(['layout' => LastImagesWidget::LAYOUT_MAIN_PAGE, 'title' => Yii::t('app', 'Last News')]) ?>
             
         </div><!-- end sidebar -->
     </div><!-- end col -->
