@@ -10,6 +10,8 @@ class MainController extends Controller
 {
     public function init()
     {
+        parent::init();
+        
         $this->setTheme();
     }
 
