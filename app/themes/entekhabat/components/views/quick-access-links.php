@@ -8,10 +8,12 @@
             <h2 class="widget-title"><?= $title ?></h2>
             <div class="link-widget">
                 <ul>
+                <?php if(!empty($items)): ?>
                     <?php foreach($items as $item): ?>
                         <li><a href="<?= $item->url ?>"><?= $item->title; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
             </div><!-- end link-widget -->
         </div><!-- end widget -->
         
